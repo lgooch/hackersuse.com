@@ -1,0 +1,79 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: gray;
+      font-size: 250%;
+    }
+
+    #sticker {
+      background: red;
+      position: absolute;
+      /* display: block; */
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      padding: 0 0 0.5em 0;
+      border-radius: 0.5em;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+
+    #sticker .header {
+      color: white;
+      display: inline-block;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      font-size: 130%;
+      width: 100%;
+      margin: -0.8em -1em -0.8em -1em;
+    }
+
+    #sticker .body {
+      display: inline-block;
+      background: white;
+      color: black;
+      font-family: 'Indie Flower', cursive;
+      font-size: 200%;
+      line-height: 0.25em;
+      width: 100%;
+    }
+  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HACKERS USE!!!</title>
+</head>
+
+<body>
+  <div id="sticker">
+    <span class="header">
+      <p>Hackers use</p>
+    </span>
+    <span class="body">
+        <p id="object">All the things</p>
+    </span>
+  </div>
+  <a id="myButton" href="#">click here</a>
+</body>
+<script type="text/javascript" charset="utf-8">
+    var randomStrings = [
+        "Bluetooth",
+        "Jira",
+        "All the things", 
+        "Laptops",
+        "Hacking",
+    ];
+
+
+
+    var randomDiv = document.getElementById("object");
+
+    document.getElementById("myButton").addEventListener("click", function() {
+          randomIndex = Math.ceil((Math.random()*randomStrings.length-1));
+          newText = randomStrings[randomIndex];
+          randomDiv.innerHTML = newText;
+    });
+</script> 
+</html>
